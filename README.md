@@ -2,7 +2,7 @@
 ## Summary :sunny:
  **MEAN stack web app**
 a web application that displays users data and allow CRUD
-this is a true **FullStack** project that uses technologies like:
+this is **FullStack** project that uses the technologies:
 * Node.js - Backend
 * EXPRESS - Server
 * Angular - Frontend (Client)
