@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const users = require('./usersModel');
 
 // Basic CRUD Operations
@@ -15,7 +14,7 @@ exports.getAllUsers = () => {
 // GET
 exports.getUser = (id) => {
     return new Promise((resolve, reject) => {
-        users.find({_id: id}, (err, res) => {
+        users.findById(id, (err, res) => {
             (err) ? reject(err) : resolve(res)
         })
     })
