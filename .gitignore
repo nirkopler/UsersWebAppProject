@@ -1,0 +1,8 @@
+# Environment Variables
+/server/.env
+
+# dependencies
+/server/node_modules
+
+# DB Fake Data
+/DB
