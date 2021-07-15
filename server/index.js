@@ -18,6 +18,11 @@ require('./config/databaseConnection');
 // Connect to Router
 app.use('/api/users', productsRouter);
 
+// Handling Errors
+app.use((err, req, res, next) => {
+    return res.status(500).json({ error: err.toString() });
+});
+
 // Get port for .env
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
