@@ -9,6 +9,10 @@ this is **FullStack** project that uses the technologies:
 * MongoDB - Database
 
 ## Progress :muscle:
+### 15/7/2021
+* created server architecture
+* created all files for EXPRESS server
+
 ### 14/7/2021 - architectural plan
 * created DB architecture
 * created Client architecture
