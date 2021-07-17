@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+
+:root {
+/* COlOR SCHEME 1 */
+    --russian-green: #6a8d73ff;
+    --nyanza: #f4fdd9ff;
+    --nyanza-2: #e4ffe1ff;
+    --blanched-almond: #ffe8c2ff;
+    --sandy-brown: #f0a868ff;
+
+/* COlOR SCHEME 2 */
+    --tufts-blue: #3c91e6ff;
+    --black-coffee: #342e37ff;
+    --yellow-green: #a2d729ff;
+    --baby-powder: #fafffdff;
+    --mandarin: #fa824cff;
+}
+
+html {
+    font-size: 100%;
+    -webkit-appearance: none;
+} 
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: var(--black-coffee);
+    background-color: var(--baby-powder);
+
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4, h5 {margin: 0px; padding: 0px;}
+
+h1 {font-size: 3.052rem;}
+  
+h2 {font-size: 2.441rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+textarea, input {
+    outline: none;
+    border: 1px solid var(--black-coffee);
+    border-radius: 3px;
+    padding: 5px;
+    margin: 3px 0;
+}
+
+button, input[type=button] {
+    padding: 5px;
+    margin: 0 auto;
+}

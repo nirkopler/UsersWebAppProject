@@ -1,0 +1,33 @@
+.user {
+    border: 3px solid var(--black-coffee);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.user form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.otherDataBtn h4 {
+    display: inline-block;
+}
+
+.otherData {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.actionBtns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.actionBtns button {
+    flex: 1;
+    margin: 0 10px;
+}

@@ -18,6 +18,7 @@ import { PostsMainComponent } from './components/user-dashboard/posts/posts-main
 import { PostComponent } from './components/user-dashboard/posts/post/post.component';
 import { AddPostComponent } from './components/user-dashboard/posts/add-post/add-post.component';
 import { AddUserComponent } from './components/users/add-user/add-user.component';
+import { DashboardComponent } from './components/user-dashboard/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddUserComponent } from './components/users/add-user/add-user.component
     PostsMainComponent,
     PostComponent,
     AddPostComponent,
-    AddUserComponent
+    AddUserComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

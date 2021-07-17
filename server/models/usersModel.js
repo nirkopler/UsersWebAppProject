@@ -8,7 +8,7 @@ const userAddressSchema = new mongoose.Schema({
 }, { _id : false })
 
 // Task SubSchema
-const taskSchema = new mongoose.Schema({
+const todoSchema = new mongoose.Schema({
     title: {type: String, required: true},
     completed: {type: Boolean, required: true}
 })
@@ -24,7 +24,7 @@ const usersSchema = new mongoose.Schema({
     full_name: {type: String, required: true},
     email: {type: String, required: true},
     address: {type: userAddressSchema, required: false},
-    tasks: [{type: taskSchema, required: false}],
+    todos: [{type: todoSchema, required: false}],
     posts: [{type: postSchema, required: false}]
 })
 

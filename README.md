@@ -9,10 +9,19 @@ this is **FullStack** project that uses the technologies:
 * MongoDB - Database
 
 ## Progress :muscle:
-### 15/7/2021 - server setup
+### 16/7/2021 - main client setup
+* basic client routing
+* client users-main & user components
+* created userUtils Service ⛽
+* created :User Interface in client (user.ts) 👍
+* client basic style
+* client basic setup
+* created client dir
+
+### 15/7/2021 - server setup 👌 ⛽
 * server error handling
-* specific model schema and subschema
-* basic server setup
+* specific model schema and subschema 👍
+* basic server setup 
 * created server architecture
 * created all files for EXPRESS server
 

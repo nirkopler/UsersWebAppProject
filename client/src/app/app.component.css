@@ -1,0 +1,22 @@
+:host {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container app-users-main , .router-div {
+    flex: 1;
+    border: 3px dashed var(--mandarin);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    overflow:auto;
+}
