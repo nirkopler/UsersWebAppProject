@@ -1,5 +1,5 @@
 <div class="user" [class]="areAllCompleted ? 'todosTrue' : 'todosFalse'">
-    <h4>user id: {{userData._id}}</h4>
+    <h4 (click)='goToDashboard()'>user id: {{userData._id}}</h4>
     <form (ngSubmit)="onSubmit()" #form="ngForm">
         <!-- User Name -->
         <label for="name">Name: </label>

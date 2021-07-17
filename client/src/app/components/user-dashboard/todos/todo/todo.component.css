@@ -1,0 +1,6 @@
+.todo {
+    border: 3px solid var(--black-coffee);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+}

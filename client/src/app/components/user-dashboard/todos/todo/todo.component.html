@@ -1,1 +1,5 @@
-<p>todo works!</p>
+<div class="todo">
+    <p>Title: {{todoData.title}}</p>
+    <p>Completed: {{todoData.completed ? 'true' : 'false'}}</p>
+    <button *ngIf="!todoData.completed" (click)='markAsCompleted()'>Mark as Completed</button>
+</div>

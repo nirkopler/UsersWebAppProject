@@ -10,6 +10,9 @@ this is **FullStack** project that uses the technologies:
 
 ## Progress :muscle:
 ### 17/7/2021 - main client setup
+* create base services for todos & posts BL
+* created todos section
+* created basic dashboard functionality
 * added users-main parent-child binding
 * fixed server userModel 🚀
 * added border color for todos
@@ -33,3 +36,13 @@ this is **FullStack** project that uses the technologies:
 ### 14/7/2021 - architectural plan
 * created DB architecture
 * created Client architecture
+
+## Things to do 🔥
+* add todos and posts BL in server
+* reconsider the client structure
+* reconsider the server structure
+* build the posts sections (same as todos)
+* create add-user comp
+* create add-todo comp
+* create add-post comp
+* create search bar

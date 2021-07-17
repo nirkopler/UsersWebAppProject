@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/services/user';
 import { UserUtilsService } from 'src/app/services/user-utils.service';
@@ -22,7 +23,7 @@ export class UserComponent implements OnInit, OnDestroy {
   otherDataBtn :boolean = false;
   sub :Subscription = new Subscription();
 
-  constructor(private userUtils :UserUtilsService) { }
+  constructor(private userUtils :UserUtilsService, private router :Router) { }
 
   onSubmit() {
       this.sub = this.userUtils.putUser(this.userData._id!, this.userData)
@@ -39,6 +40,16 @@ export class UserComponent implements OnInit, OnDestroy {
     if (this.userData.todos!.length > 0) {
       return !this.userData.todos!.map(todo => todo.completed).includes(false)
     } else { return false }
+  }
+
+  redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+    this.router.navigate([uri]));
+ }
+  
+  goToDashboard() {
+    this.userUtils.userData = this.userData;
+    this.redirectTo(this.userData._id as string)
   }
 
   ngOnInit(): void {

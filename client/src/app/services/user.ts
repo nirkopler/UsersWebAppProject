@@ -1,11 +1,11 @@
 export interface Todo {
-    id: string,
+    _id: string,
     title: string,
     completed: boolean
 }
 
 export interface Post {
-    id: string,
+    _id: string,
     title: string,
     body: string
 }

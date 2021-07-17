@@ -8,7 +8,7 @@ import { User } from './user';
 export class UserUtilsService {
 
   uri :string = 'http://localhost:8000/api/users'
-  userData :User[] = [];
+  userData :User = {full_name: '', email: ''};
 
   constructor( private http :HttpClient ) { }
 
@@ -32,7 +32,11 @@ export class UserUtilsService {
     return this.http.delete(`${this.uri}/${id}`)
   }
 
-  setUserData(data: User[]) {
-    this.userData = data;
+  setUserData(user :User) {
+    this.userData = user;
+  }
+
+  getUserData() :User {
+    return this.userData;
   }
 }

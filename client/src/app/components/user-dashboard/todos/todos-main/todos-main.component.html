@@ -1,1 +1,5 @@
-<p>todos-main works!</p>
+<div class="todo-main">
+    <div *ngFor="let todo of userTodos">
+        <app-todo [todoData]='todo' (todoMarkAsCompleted)='marAsCompleted($event)'></app-todo>
+    </div> 
+</div>
