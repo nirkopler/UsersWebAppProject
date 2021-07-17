@@ -9,6 +9,11 @@ this is **FullStack** project that uses the technologies:
 * MongoDB - Database
 
 ## Progress :muscle:
+### 17/7/2021 - main client setup
+* added users-main parent-child binding
+* fixed server userModel 🚀
+* added border color for todos
+
 ### 16/7/2021 - main client setup
 * basic client routing
 * client users-main & user components

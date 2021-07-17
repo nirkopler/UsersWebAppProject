@@ -1,20 +1,26 @@
+export interface Todo {
+    id: string,
+    title: string,
+    completed: boolean
+}
+
+export interface Post {
+    id: string,
+    title: string,
+    body: string
+}
+
+export interface Address {
+    street: string,
+    city: string,
+    zipcode: number
+}
+
 export interface User {
     _id?: string,
     full_name: string,
     email: string,
-    address?: {
-        street: string,
-        city: string,
-        zipcode: number
-    },
-    todos?: {
-        id: string,
-        title: string,
-        completed: boolean
-    },
-    posts?: {
-        id: string,
-        title: string,
-        bpdy: string
-    }
+    address?: Address,
+    todos?: Array<Todo>,
+    posts?: Array<Post>
 }

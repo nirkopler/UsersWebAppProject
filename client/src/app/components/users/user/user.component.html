@@ -1,4 +1,4 @@
-<div class="user">
+<div class="user" [class]="areAllCompleted ? 'todosTrue' : 'todosFalse'">
     <h4>user id: {{userData._id}}</h4>
     <form (ngSubmit)="onSubmit()" #form="ngForm">
         <!-- User Name -->
@@ -26,7 +26,7 @@
         </div>
         <div class="actionBtns">
             <button type="submit" [disabled]="!form.form.valid">Update</button>
-            <button>DELETE</button>
+            <button type="button" (click)='deleteUser()'>DELETE</button>
         </div>
     </form>
 </div>
