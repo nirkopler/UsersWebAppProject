@@ -5,14 +5,20 @@ import { Todo } from './user';
 @Injectable({
   providedIn: 'root'
 })
+
+// Service for Todos CRUD
 export class TodoUtilsService {
 
-  uri :string = 'http://localhost:8000/api/users'
+  uri :string = 'http://localhost:8000/api/todos/'
 
   constructor(private http :HttpClient) { }
   
-  updateTodos(id :string, todos :Todo[]) {
-    return this.http.put(`${this.uri}/${id}`, {todos: todos })
+  updateTodo(todoId :string, todo :Todo) {
+    return this.http.put(`${this.uri}/${todoId}`, todo);
+  }
+
+  addTodo(userId :string, todo :Todo) {
+    return this.http.post(`${this.uri}/${userId}`, todo);
   }
 
 }

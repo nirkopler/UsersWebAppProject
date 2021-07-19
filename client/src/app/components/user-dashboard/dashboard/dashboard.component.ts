@@ -14,18 +14,17 @@ export class DashboardComponent implements OnInit, OnDestroy {
   userData :User = {full_name: '', email: ''};
   userId :string = '';
 
+  addTodoBtn :boolean = false;
+
   sub :Subscription = new Subscription();
 
   constructor(private userUtils :UserUtilsService, private act :ActivatedRoute) { }
 
-  getUserData() {
-    // this.sub = this.act.params.subscribe(param => this.userId = param['id']);
-    // this.sub = this.userUtils.getUser(this.userId).subscribe(data => this.userData = data);
-    this.userData = this.userUtils.userData;
-  }
-
   ngOnInit(): void {
-    this.getUserData();
+    // get the url params
+    this.sub = this.act.params.subscribe(param => this.userId = param['id']);
+    // get data of user from service by user id
+    this.sub = this.userUtils.currentUsersData.subscribe(data => this.userData = data.find(user => user._id == this.userId) as User)
   }
 
   ngOnDestroy() {

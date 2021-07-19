@@ -1,1 +1,8 @@
-<p>add-todo works!</p>
+<div>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <label for="todoTitle">Add New Todo</label>
+        <input type="text" name="todoTitle" id="todoTitle" [(ngModel)]="todo.title" required><br>
+        <button type="button" (click)='goBack()'>cancel</button>
+        <button type="submit" [disabled]="!form.form.valid">add</button>
+    </form>
+</div>

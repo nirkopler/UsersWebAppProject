@@ -1,4 +1,4 @@
-<div class="user" [class]="areAllCompleted ? 'todosTrue' : 'todosFalse'">
+<div class="user" [class]="userTodosStatus() ? 'todosTrue' : 'todosFalse'" [style.backgroundColor]="selectedUser() ? 'MistyRose' : 'transparent'">
     <h4 (click)='goToDashboard()'>user id: {{userData._id}}</h4>
     <form (ngSubmit)="onSubmit()" #form="ngForm">
         <!-- User Name -->

@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/services/user';
 import { UserUtilsService } from 'src/app/services/user-utils.service';
@@ -15,18 +16,17 @@ export class UsersMainComponent implements OnInit, OnDestroy {
 
   constructor(private userUtils :UserUtilsService) { }
 
-  deleteUser(userId :string) {
-    const id :number= this.usersData.findIndex(user => user._id === userId);
-    this.usersData.splice(id, 1);
-  }
-
   ngOnInit(): void {
+    // get all data from server
     this.sub = this.userUtils.getAllUsers()
       .subscribe((data :User[])=> {
         console.log(data, typeof data);
-        this.usersData = data;
-        // this.userUtils.setUserData(data);
+        //set data to service
+        this.userUtils.setUsersData(data);
       });
+    
+    // set the data of component to data from service
+    this.sub = this.userUtils.currentUsersData.subscribe(data => this.usersData = data);
   }
 
   ngOnDestroy() {

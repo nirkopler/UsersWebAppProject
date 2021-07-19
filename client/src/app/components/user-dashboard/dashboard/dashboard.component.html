@@ -1,6 +1,8 @@
 <div class="dashboard">
     <div class="todos">
-        <app-todos-main [userTodos]='userData.todos!'></app-todos-main>
+        <button (click)='addTodoBtn = !addTodoBtn'>add-todo</button>
+        <app-add-todo *ngIf="addTodoBtn" (back)='addTodoBtn = $event'></app-add-todo>
+        <app-todos-main [userTodos]='userData.todos!' *ngIf="!addTodoBtn"></app-todos-main>
     </div>
     <div class="posts">
         <app-posts-main></app-posts-main>

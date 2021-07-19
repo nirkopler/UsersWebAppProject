@@ -1,7 +1,7 @@
 export interface Todo {
-    _id: string,
+    _id?: string,
     title: string,
-    completed: boolean
+    completed?: boolean
 }
 
 export interface Post {

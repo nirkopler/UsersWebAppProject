@@ -14,28 +14,12 @@ export class TodosMainComponent implements OnInit, OnDestroy {
 
   @Input()
   userTodos :Todo[] = [];
-
-  userId :string = '';
-  sub :Subscription = new Subscription();
   
-  constructor( private userUtils :UserUtilsService ,private todosUtils :TodoUtilsService, private act :ActivatedRoute) { }
-
-  marAsCompleted(todoId :string) {
-    let todo = this.userTodos.find(todo => todo._id === todoId);
-    todo!.completed = true;
-    this.userUtils.userData.todos = this.userTodos;
-
-    // this.sub = this.act.params.subscribe(param => this.userId = param['id']);
-    this.userId = this.userUtils.userData._id as string;
-    this.sub = this.todosUtils.updateTodos(this.userId, this.userTodos)
-      .subscribe(data => console.log(data));
-  }
+  constructor() { }
   
   ngOnInit(): void {
-    
   }
 
   ngOnDestroy() {
-    this.sub.unsubscribe()
   }
 }

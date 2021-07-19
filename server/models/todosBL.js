@@ -6,8 +6,8 @@ exports.postTodo = (userId ,newTodo) => {
         users.findById(userId, (err, res) => {
             if(err) {reject(err)} else {
                 res.todos.push(newTodo);
-                res.save((err) => {
-                    (err) ? reject(err) : resolve(`todo added to user: ${userId}`)
+                res.save((err, user) => {
+                    (err) ? reject(err) : resolve(user.todos[user.todos.length - 1]._id);
                 })
             }
         })

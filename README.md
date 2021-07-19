@@ -1,5 +1,5 @@
 # Users - Angular web application
-## Summary :sunny:
+## Summary ☀️
  **MEAN stack web app**
 a web application that displays users data and allow CRUD
 this is **FullStack** project that uses the technologies:
@@ -8,9 +8,16 @@ this is **FullStack** project that uses the technologies:
 * Angular - Frontend (Client)
 * MongoDB - Database
 
-## Progress :muscle:
-### 17/7/2021 - main client setup
-* create base services for todos & posts BL
+## Progress 💪
+### 19/7/2021 - updated server & BIG UI upgrade!
+* added selected user background change
+* completed todos section 🎆😁
+* updated app with new userUtils Service🥰
+* applyed BehaviorSubject in userUtils Service (for state managment)
+* added todosBL & todosRouter for managing todos PUT & POST requests 👌
+
+### 17/7/2021
+* create base services for todos & posts BL 
 * created todos section
 * created basic dashboard functionality
 * added users-main parent-child binding
@@ -38,11 +45,8 @@ this is **FullStack** project that uses the technologies:
 * created Client architecture
 
 ## Things to do 🔥
-* add todos and posts BL in server
-* reconsider the client structure
-* reconsider the server structure
+* create posts BL & router in server
 * build the posts sections (same as todos)
-* create add-user comp
-* create add-todo comp
 * create add-post comp
+* create add-user comp
 * create search bar
