@@ -2,7 +2,8 @@ require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const productsRouter = require('./routers/usersRouter')
+const usersRouter = require('./routers/usersRouter')
+const todosRouter = require('./routers/todosRouter')
 
 // Create an EXPRESS instance
 const app = express()
@@ -16,7 +17,8 @@ app.use(morgan('tiny'));
 require('./config/databaseConnection');
 
 // Connect to Router
-app.use('/api/users', productsRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/todos', todosRouter);
 
 // Handling Errors
 app.use((err, req, res, next) => {
