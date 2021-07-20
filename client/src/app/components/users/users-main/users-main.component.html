@@ -1,10 +1,12 @@
 <div class="usersMain">
     <div class="searchBar">
-        <input type="text"><button>add-user</button>
+        <input type="text" placeholder="search" [(ngModel)]="searchInp">
+        <button (click)='searchInp = ""'>⛔</button>
+        <button>add-user</button>
     </div>
     <div class="userData">
         <div *ngFor="let user of usersData">
-            <app-user [userData]="user"></app-user>
+            <app-user [userData]="user" *ngIf="search(user)"></app-user>
         </div>
     </div>
 </div>

@@ -13,8 +13,18 @@ export class UsersMainComponent implements OnInit, OnDestroy {
 
   sub :Subscription = new Subscription();
   usersData :User[] = [];
+  searchInp :string = '';
 
   constructor(private userUtils :UserUtilsService) { }
+
+  //search function - check if user in ngFor contains string
+  search(user :User) :boolean {
+    const userName = user.full_name.toLowerCase();
+    const userEmail = user.email.toLowerCase();
+    if(userName.includes(this.searchInp) || userEmail.includes(this.searchInp)) {
+      return true
+    } else {return false}
+  }
 
   ngOnInit(): void {
     // get all data from server

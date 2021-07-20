@@ -6,7 +6,23 @@
 }
 
 .searchBar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     background-color: var(--baby-powder);
+}
+
+.searchBar * {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+.searchBar button {
+    flex: 1;
+}
+
+.searchBar input {
+    flex: 3;
 }
