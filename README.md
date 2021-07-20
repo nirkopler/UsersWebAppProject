@@ -9,7 +9,8 @@ this is **FullStack** project that uses the technologies:
 * MongoDB - Database
 
 ## Progress 💪
-### 20/7/2021
+### 20/7/2021 - Project is DONE!
+* completed add-user comp
 * created search bar in users-main 😉
 * fixed css of users-main (overflow)
 * completed posts section 🎆😁
@@ -53,5 +54,7 @@ this is **FullStack** project that uses the technologies:
 * created Client architecture
 
 ## Things to do 🔥
-* create add-user comp
+* upgrade form validation
+* css upgrades
+* fix delete bug
 * edit app description

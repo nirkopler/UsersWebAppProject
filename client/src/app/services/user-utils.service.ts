@@ -21,6 +21,12 @@ export class UserUtilsService {
     this.usersSource.next(users);
   }
 
+  postNewUserData(user :User) {
+    const usersArray = this.usersSource.getValue();
+    usersArray.push(user);
+    this.usersSource.next(usersArray);
+  }
+
   updateUserData(userId :string, user :User) {
     const usersArray = this.usersSource.getValue();
     let currentUserIndex = usersArray.findIndex((user :User) => user._id === userId);

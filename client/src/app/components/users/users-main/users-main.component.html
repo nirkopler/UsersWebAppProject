@@ -2,7 +2,7 @@
     <div class="searchBar">
         <input type="text" placeholder="search" [(ngModel)]="searchInp">
         <button (click)='searchInp = ""'>⛔</button>
-        <button>add-user</button>
+        <button routerLink='add-user'>add-user</button>
     </div>
     <div class="userData">
         <div *ngFor="let user of usersData">

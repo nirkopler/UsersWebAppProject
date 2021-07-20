@@ -54,7 +54,7 @@ export class UserComponent implements OnInit, OnDestroy {
   
   goToDashboard() {
     this.userUtils.userId = this.userData._id as string;
-    this.redirectTo(this.userData._id as string)
+    this.redirectTo(`dashboard/${this.userData._id as string}`)
   }
 
   ngOnInit(): void {

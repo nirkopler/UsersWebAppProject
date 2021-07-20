@@ -23,8 +23,8 @@ exports.getUser = (id) => {
 // POST
 exports.postUser = (newUser) => {
     return new Promise((resolve, reject) => {
-        new users(newUser).save((err) => {
-            (err) ? reject(err) : resolve('POST Completed')
+        new users(newUser).save((err, user) => {
+            (err) ? reject(err) : resolve(user)
         })
     })
 }

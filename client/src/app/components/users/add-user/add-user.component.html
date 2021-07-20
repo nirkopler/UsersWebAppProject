@@ -1,1 +1,11 @@
-<p>add-user works!</p>
+<div class="addUser">
+    <h3>Add New User</h3>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="user_name" [(ngModel)]="newUser.full_name" required><br>
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="user_email" [(ngModel)]="newUser.email" required><br>
+        <button routerLink='/'>cancel</button>
+        <button type="submit" [disabled]="!form.form.valid">Add User</button>
+    </form>
+</div>

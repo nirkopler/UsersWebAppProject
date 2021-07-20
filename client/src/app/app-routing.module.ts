@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/user-dashboard/dashboard/dashboard.component';
-import { AddTodoComponent } from './components/user-dashboard/todos/add-todo/add-todo.component';
+import { AddUserComponent } from './components/users/add-user/add-user.component';
 
 const routes: Routes = [
-  { path: ':id', component: DashboardComponent }
+  { path: 'dashboard/:id', component: DashboardComponent },
+  { path: 'add-user', component: AddUserComponent },
 ];
 
 @NgModule({
