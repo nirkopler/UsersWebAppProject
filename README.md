@@ -10,6 +10,8 @@ this is **FullStack** project that uses the technologies:
 
 ## Progress 💪
 ### 20/7/2021
+* completed posts section 🎆😁
+* created posts section & add-post
 * fixed add todo bug
 * added postsBL & postsRouter for managing posts PUT & POST requests 👌
 
@@ -49,7 +51,5 @@ this is **FullStack** project that uses the technologies:
 * created Client architecture
 
 ## Things to do 🔥
-* build the posts sections (same as todos)
-* create add-post comp
 * create add-user comp
 * create search bar

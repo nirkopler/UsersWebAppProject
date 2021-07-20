@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Todo, User } from './user';
+import { Post, Todo, User } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -48,6 +48,13 @@ export class UserUtilsService {
     const usersArray = this.usersSource.getValue();
     let currentUserIndex = usersArray.findIndex((user :User) => user._id === userId);
     usersArray[currentUserIndex].todos?.push(todo);
+    this.usersSource.next(usersArray);
+  }
+
+  pushUserPost(userId :string, post :Post) {
+    const usersArray = this.usersSource.getValue();
+    let currentUserIndex = usersArray.findIndex((user :User) => user._id === userId);
+    usersArray[currentUserIndex].posts?.push(post);
     this.usersSource.next(usersArray);
   }
 

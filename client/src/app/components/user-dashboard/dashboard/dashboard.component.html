@@ -1,11 +1,18 @@
 <div class="dashboard">
-    <!-- <h4>user - {{userData.full_name}}</h4> -->
-    <div class="todos">
+    <div class="userNav">
+        <h4>{{userData.full_name}} - Todos</h4>
         <button (click)='addTodoBtn = !addTodoBtn'>add-todo</button>
+    </div>
+    <div class="todos">
         <app-add-todo *ngIf="addTodoBtn" (back)='addTodoBtn = $event'></app-add-todo>
         <app-todos-main [userTodos]='userData.todos!' *ngIf="!addTodoBtn"></app-todos-main>
     </div>
+    <div class="userNav">
+        <h4>{{userData.full_name}} - Posts</h4>
+        <button (click)='addPostBtn = !addPostBtn'>add-post</button>
+    </div>
     <div class="posts">
-        <app-posts-main></app-posts-main>
+        <app-add-post *ngIf="addPostBtn" (back)='addPostBtn = $event'></app-add-post>
+        <app-posts-main [userPosts]='userData.posts!' *ngIf="!addPostBtn"></app-posts-main>
     </div>
 </div>

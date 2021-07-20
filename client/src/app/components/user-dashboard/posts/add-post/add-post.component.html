@@ -1,1 +1,10 @@
-<p>add-post works!</p>
+<div>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <label for="postTitle">Title: </label>
+        <input type="text" name="postTitle" id="postTitle" [(ngModel)]="post.title" required><br>
+        <label for="postBody">Body: </label>
+        <input type="text" name="postBody" id="postBody" [(ngModel)]="post.body" required><br>
+        <button type="button" (click)='goBack()'>cancel</button>
+        <button type="submit" [disabled]="!form.form.valid">add</button>
+    </form>
+</div>

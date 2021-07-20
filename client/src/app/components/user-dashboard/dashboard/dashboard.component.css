@@ -8,3 +8,17 @@
     overflow: auto;
     flex: 1;
 }
+
+.userNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.userNav h4 {
+    flex: 3;
+}
+
+.userNav button {
+    flex: 1;
+}

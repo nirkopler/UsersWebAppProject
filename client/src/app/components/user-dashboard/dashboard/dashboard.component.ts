@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   userId :string = '';
 
   addTodoBtn :boolean = false;
+  addPostBtn :boolean = false;
 
   sub :Subscription = new Subscription();
 

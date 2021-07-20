@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Post } from 'src/app/services/user';
 
 @Component({
   selector: 'app-posts-main',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts-main.component.css']
 })
 export class PostsMainComponent implements OnInit {
+
+  @Input()
+  userPosts :Post[] = [];
 
   constructor() { }
 

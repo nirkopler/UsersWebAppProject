@@ -1,1 +1,5 @@
-<p>posts-main works!</p>
+<div class="post-main">
+    <div *ngFor="let post of userPosts">
+        <app-post [postData]='post'></app-post>
+    </div>
+</div>
