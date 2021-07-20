@@ -1,6 +1,10 @@
-<div>
-    <h1>users-main</h1>
-    <div *ngFor="let user of usersData">
-        <app-user [userData]="user"></app-user>
+<div class="usersMain">
+    <div class="searchBar">
+        <input type="text"><button>add-user</button>
+    </div>
+    <div class="userData">
+        <div *ngFor="let user of usersData">
+            <app-user [userData]="user"></app-user>
+        </div>
     </div>
 </div>

@@ -10,6 +10,7 @@ this is **FullStack** project that uses the technologies:
 
 ## Progress 💪
 ### 20/7/2021
+* fixed css of users-main (overflow)
 * completed posts section 🎆😁
 * created posts section & add-post
 * fixed add todo bug
@@ -52,4 +53,5 @@ this is **FullStack** project that uses the technologies:
 
 ## Things to do 🔥
 * create add-user comp
-* create search bar
+* create search bar (already created ui)
+* edit app description

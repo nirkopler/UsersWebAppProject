@@ -1,0 +1,12 @@
+.usersMain {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.searchBar {
+    position: sticky;
+    top: 0;
+    background-color: var(--baby-powder);
+}
