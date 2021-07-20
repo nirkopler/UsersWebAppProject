@@ -1,4 +1,5 @@
 <div class="dashboard">
+    <!-- <h4>user - {{userData.full_name}}</h4> -->
     <div class="todos">
         <button (click)='addTodoBtn = !addTodoBtn'>add-todo</button>
         <app-add-todo *ngIf="addTodoBtn" (back)='addTodoBtn = $event'></app-add-todo>

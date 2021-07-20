@@ -7,7 +7,7 @@ exports.postTodo = (userId ,newTodo) => {
             if(err) {reject(err)} else {
                 res.todos.push(newTodo);
                 res.save((err, user) => {
-                    (err) ? reject(err) : resolve(user.todos[user.todos.length - 1]._id);
+                    (err) ? reject(err) : resolve(user.todos[user.todos.length - 1]);
                 })
             }
         })

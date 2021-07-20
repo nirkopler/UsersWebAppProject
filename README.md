@@ -9,6 +9,10 @@ this is **FullStack** project that uses the technologies:
 * MongoDB - Database
 
 ## Progress 💪
+### 20/7/2021
+* fixed add todo bug
+* added postsBL & postsRouter for managing posts PUT & POST requests 👌
+
 ### 19/7/2021 - updated server & BIG UI upgrade!
 * added selected user background change
 * completed todos section 🎆😁
@@ -45,7 +49,6 @@ this is **FullStack** project that uses the technologies:
 * created Client architecture
 
 ## Things to do 🔥
-* create posts BL & router in server
 * build the posts sections (same as todos)
 * create add-post comp
 * create add-user comp

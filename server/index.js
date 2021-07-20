@@ -4,6 +4,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const usersRouter = require('./routers/usersRouter')
 const todosRouter = require('./routers/todosRouter')
+const postsRouter = require('./routers/postsRouter')
 
 // Create an EXPRESS instance
 const app = express()
@@ -19,6 +20,7 @@ require('./config/databaseConnection');
 // Connect to Router
 app.use('/api/users', usersRouter);
 app.use('/api/todos', todosRouter);
+app.use('/api/posts', postsRouter);
 
 // Handling Errors
 app.use((err, req, res, next) => {

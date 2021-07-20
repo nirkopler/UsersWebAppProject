@@ -17,19 +17,18 @@ export class AddTodoComponent implements OnInit, OnDestroy {
   sub :Subscription = new Subscription();
 
   todo :Todo = {
-    title: '',
-    completed: false
+    title: ''
   }
   userId :string = '';
 
   constructor(private todoUtils :TodoUtilsService, private act :ActivatedRoute, private userUtils :UserUtilsService) { }
   
-  
   onSubmit() {
     // send data to server
-    this.todoUtils.addTodo(this.userId, this.todo).subscribe(data => this.todo._id = data as string);
-    // update Service Data
-    this.userUtils.pushUserTodo(this.userId, this.todo);
+    this.todoUtils.addTodo(this.userId, this.todo).subscribe(data => {
+      // when data arrives update the userUtiles Service
+      this.userUtils.pushUserTodo(this.userId, data as Todo);
+    });
     //go back
     this.goBack();
   }

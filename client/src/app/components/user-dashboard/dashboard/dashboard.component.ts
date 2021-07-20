@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     // get the url params
     this.sub = this.act.params.subscribe(param => this.userId = param['id']);
     // get data of user from service by user id
-    this.sub = this.userUtils.currentUsersData.subscribe(data => this.userData = data.find(user => user._id == this.userId) as User)
+    this.sub = this.userUtils.currentUsersData.subscribe(data => this.userData = data.find(user => user._id == this.userId) as User);
   }
 
   ngOnDestroy() {

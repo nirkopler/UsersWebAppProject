@@ -5,7 +5,7 @@ export interface Todo {
 }
 
 export interface Post {
-    _id: string,
+    _id?: string,
     title: string,
     body: string
 }
