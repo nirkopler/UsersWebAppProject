@@ -33,9 +33,9 @@
 }
 
 .todosTrue {
-    border-color: forestgreen;
+    border-color: var(--yellow-green);
 }
 
 .todosFalse {
-    border-color: tomato;
+    border-color: var(--mandarin);
 }

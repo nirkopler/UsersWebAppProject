@@ -4,7 +4,7 @@
         <label for="name">Name: </label>
         <input type="text" id="name" name="user_name" [(ngModel)]="newUser.full_name" required><br>
         <label for="email">Email: </label>
-        <input type="text" id="email" name="user_email" [(ngModel)]="newUser.email" required><br>
+        <input type="email" id="email" name="user_email" [(ngModel)]="newUser.email" required email><br>
         <button routerLink='/'>cancel</button>
         <button type="submit" [disabled]="!form.form.valid">Add User</button>
     </form>

@@ -1,14 +1,28 @@
 # Users - Angular web application
 ## Summary ☀️
- **MEAN stack web app**
-a web application that displays users data and allow CRUD
+**MEAN stack web app** that displays users with their data. users have todos & posts. each user can add todos & posts, also mark a todo as completed. if all the user's todos are completed, the user's border becomes green. the app also has a search option.
+In addition, I'v used RxJS Subjects for state managment.
+
 this is **FullStack** project that uses the technologies:
 * Node.js - Backend
 * EXPRESS - Server
 * Angular - Frontend (Client)
 * MongoDB - Database
 
+#### In Particular: 
+* RxJS Subjects & Behavior Subjects
+* MongoDB With sub-schemas and sub-documents
+* NodeJS & Express server with middleware architecture
+
 ## Progress 💪
+### 23/7/2021
+* upgraded form validation (email)
+* updated app style
+
+### 22/7/2021
+* fixed delete bug
+* updated app description
+
 ### 20/7/2021 - Project is DONE!
 * completed add-user comp
 * created search bar in users-main 😉
@@ -54,7 +68,4 @@ this is **FullStack** project that uses the technologies:
 * created Client architecture
 
 ## Things to do 🔥
-* upgrade form validation
-* css upgrades
-* fix delete bug
-* edit app description
+* Nothing (for now 😄)

@@ -30,6 +30,7 @@ export class UserComponent implements OnInit, OnDestroy {
 
   // on click on delete user
   deleteUser() {
+    this.router.navigate(['/']);
     this.sub = this.userUtils.deleteUser(this.userData._id!)
       .subscribe(data => console.log(data));
     this.userUtils.deleteUserData(this.userData._id!)
@@ -39,7 +40,7 @@ export class UserComponent implements OnInit, OnDestroy {
   userTodosStatus() :boolean {
     if (this.userData.todos!.length > 0) {
       return !this.userData.todos!.map(todo => todo.completed).includes(false)
-    } else { return false }
+    } else { return true }
   }
 
   // colors user background

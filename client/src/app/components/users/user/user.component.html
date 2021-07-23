@@ -1,4 +1,4 @@
-<div class="user" [class]="userTodosStatus() ? 'todosTrue' : 'todosFalse'" [style.backgroundColor]="selectedUser() ? 'MistyRose' : 'transparent'">
+<div class="user" [class]="userTodosStatus() ? 'todosTrue' : 'todosFalse'" [style.backgroundColor]="selectedUser() ? 'rgba(250, 130, 76, 0.3)' : 'transparent'">
     <h4 (click)='goToDashboard()'>user id: {{userData._id}}</h4>
     <form (ngSubmit)="onSubmit()" #form="ngForm">
         <!-- User Name -->
@@ -6,7 +6,7 @@
         <input type="text" [id]="'name-'+userData._id" name="user_name" [(ngModel)]="userData.full_name" required>
         <!-- User Email -->
         <label for="email">Email: </label>
-        <input type="email" [id]="'email-'+userData._id" name="user_email" [(ngModel)]="userData.email" required>
+        <input type="email" [id]="'email-'+userData._id" name="user_email" [(ngModel)]="userData.email" required email>
 
         <!-- Other Data -->
         <div class="otherDataBtn">

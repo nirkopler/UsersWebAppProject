@@ -3,18 +3,23 @@
     height: 100%;
 }
 
+.header {
+    text-align: center;
+    text-decoration: underline;
+}
+
 .container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    height: 100vh;
-    width: 80%;
+    height: 90vh;
+    width: 85%;
     margin: 0 auto;
 }
 
 .container app-users-main , .router-div {
     flex: 1;
-    border: 3px dashed var(--mandarin);
+    border: 3px solid var(--tufts-blue);
     border-radius: 10px;
     margin: 10px;
     padding: 5px;
