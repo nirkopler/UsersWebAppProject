@@ -21,7 +21,7 @@ export class UsersMainComponent implements OnInit, OnDestroy {
   search(user :User) :boolean {
     const userName = user.full_name.toLowerCase();
     const userEmail = user.email.toLowerCase();
-    if(userName.includes(this.searchInp) || userEmail.includes(this.searchInp)) {
+    if(userName.includes(this.searchInp.toLowerCase()) || userEmail.includes(this.searchInp.toLowerCase())) {
       return true
     } else {return false}
   }

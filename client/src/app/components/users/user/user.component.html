@@ -1,5 +1,5 @@
 <div class="user" [class]="userTodosStatus() ? 'todosTrue' : 'todosFalse'" [style.backgroundColor]="selectedUser() ? 'rgba(250, 130, 76, 0.3)' : 'transparent'">
-    <h4 (click)='goToDashboard()'>user id: {{userData._id}}</h4>
+    <h4 (click)='goToDashboard()' class="userId">user id: {{userData._id}}</h4>
     <form (ngSubmit)="onSubmit()" #form="ngForm">
         <!-- User Name -->
         <label for="name">Name: </label>
@@ -13,7 +13,7 @@
             <h4 (mouseover)="otherDataBtn = true" (click)="otherDataBtn = false">Other Data</h4>
         </div>
         <!-- data -->
-        <div  class="otherData" *ngIf="otherDataBtn">
+        <div class="otherData" *ngIf="otherDataBtn">
             <!-- User Street -->
             <label for="street">Street: </label>
             <input type="text" id="street" name="user_street" [(ngModel)]="userData.address!.street">
@@ -22,7 +22,7 @@
             <input type="text" id="city" name="user_city" [(ngModel)]="userData.address!.city">
             <!-- User Zipcode -->
             <label for="zipcode">Zipcode: </label>
-            <input type="text" id="zipcode" name="user_zipcode" [(ngModel)]="userData.address!.zipcode">
+            <input type="number" id="zipcode" name="user_zipcode" [(ngModel)]="userData.address!.zipcode">
         </div>
         <div class="actionBtns">
             <button type="submit" [disabled]="!form.form.valid">Update</button>

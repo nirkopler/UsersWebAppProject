@@ -29,6 +29,8 @@ app.use((err, req, res, next) => {
 
 // Get port for .env
 const port = process.env.PORT || 3000;
+
+//Server Listen
 app.listen(port, () => {
     console.log(`Server Is Running at http://localhost:${port}`)
 });

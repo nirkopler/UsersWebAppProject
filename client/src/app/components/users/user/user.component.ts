@@ -24,16 +24,21 @@ export class UserComponent implements OnInit, OnDestroy {
   // on form submission
   onSubmit() {
       this.sub = this.userUtils.putUser(this.userData._id!, this.userData)
-      .subscribe(data => console.log(data));
+      .subscribe(data => {
+        alert(`User: ${this.userData.full_name} Updated!`);
+        console.log(data);
+      });
       this.userUtils.updateUserData(this.userData._id!, this.userData);
   }
 
   // on click on delete user
   deleteUser() {
     this.router.navigate(['/']);
-    this.sub = this.userUtils.deleteUser(this.userData._id!)
-      .subscribe(data => console.log(data));
-    this.userUtils.deleteUserData(this.userData._id!)
+    if(confirm(`Delete User: ${this.userData.full_name}?`)) {
+      this.sub = this.userUtils.deleteUser(this.userData._id!)
+        .subscribe(data => console.log(data));
+      this.userUtils.deleteUserData(this.userData._id!)
+    }
   }
 
   //checkes if all user todo are completed

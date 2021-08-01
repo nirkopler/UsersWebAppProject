@@ -15,6 +15,11 @@ this is **FullStack** project that uses the technologies:
 * NodeJS & Express server with middleware architecture
 
 ## Progress 💪
+### 1/8/2021 - Final Touches ✨
+* added alerts on Update & Delete User
+* fix search input bug
+* improved UI (buttons)
+
 ### 23/7/2021
 * upgraded form validation (email)
 * updated app style
