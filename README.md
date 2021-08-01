@@ -29,6 +29,8 @@ cd client && npm start
 ```
 4. go to http://localhost:4200/ 😁
 
+![gif of users project](UsersProjectGif.gif)
+
 ## Progress 💪
 ### 1/8/2021 - Final Touches ✨
 * added alerts on Update & Delete User
