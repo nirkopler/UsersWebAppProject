@@ -16,11 +16,17 @@ this is **FullStack** project that uses the technologies:
 
 ## Start this project in your own machine 🤖:
 1. clone this project and cd to cloned dir.  
-        git clone git@github.com:nirkopler/UsersWebAppProject.git
-2. cd to server and start server in your machine.  
-        cd server && npm start
+```
+git clone git@github.com:nirkopler/UsersWebAppProject.git
+```
+2. cd to server and start server in your machine. 
+``` 
+cd server && npm start
+```
 3. cd to client and start client in your machine.  
-        cd client && npm start
+```
+cd client && npm start
+```
 4. go to http://localhost:4200/ 😁
 
 ## Progress 💪
